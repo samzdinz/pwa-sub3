@@ -27,8 +27,9 @@ workbox.precaching.precacheAndRoute([
     { url: '/assets/icons-2.png', revision: '1' },
     { url: '/assets/player.png', revision: '1' },
     { url: '/push.js', revision: '1' },
-
-]);
+], {
+    ignoreUrlParametersMatching: [/.*/]
+});
 
 workbox.routing.registerRoute(
     /\.(?:png|gif|jpg|jpeg|svg)$/,
